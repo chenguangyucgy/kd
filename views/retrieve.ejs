@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/jquery-3.0.0.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= infos %></p>
+    <select name="">
+      <option value="1">1</option>
+      <option value="<%= infos[0].name %>"><%= infos[0].name %></option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <input type="text" name="" value=""></input>
+    <button type="button" aaa="<%= infos[0].name %>">提交</button>
+    <script>
+      $(function(){
+        $("button").click(function(){
+        if($('select').val() == $("button").attr('aaa')){
+          console.log("aaaaaaaaaaaaa");
+        }else{
+          console.log("错误");
+          // window.location.href='./err';
+        };
+        });
+      });
+    </script>
+  </body>
+</html>
